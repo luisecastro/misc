@@ -92,8 +92,6 @@ def binomial_range(n: int, k_lo: int, k_hi: int, p: float) -> (float, list):
 
 
 #Poisson distribution calculation and cumulative values over a provided range.
-#Check the different approach to the binomial range, here using np.vectorize
-#for dealing with a set of numbers, in the previous with the for loop
 def poisson(lambd: float, x: int) -> float:
     """
     Evaluation of the Poisson formula for lambda and x
@@ -103,6 +101,20 @@ def poisson(lambd: float, x: int) -> float:
     """
     return ((e()**(-lambd))*(lambd**x))/factorial(x)
 
+
+def poisson_cdf(lambd: float, x_hi:int) -> list:
+    """
+    Cummulative evaluation of poisson from 0 to x_hi
+    :param lambd: mean number of successes
+    :param x_hi: upper limit
+    :return: cummulative evaluation of Poisson formula
+    """ 
+    result = 0
+    
+    for i in range(x_hi+1):
+        result += poisson(lambd, i)
+
+    return result
 
 #Calculation of the probability and the cummulative distribution for the normal
 #distribution, to calculate the cummulative value we need to integrate done with
