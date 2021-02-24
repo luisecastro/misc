@@ -104,9 +104,6 @@ def poisson(lambd: float, x: int) -> float:
     return ((e()**(-lambd))*(lambd**x))/factorial(x)
 
 
-poisson_range = np.vectorize(poisson)
-
-
 #Calculation of the probability and the cummulative distribution for the normal
 #distribution, to calculate the cummulative value we need to integrate done with
 #scipy integration.
