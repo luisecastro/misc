@@ -1,4 +1,4 @@
 # misc
-Miscelaneous Code
+Miscelaneous Code for Data Science and Business Analytics course
 
 ### WARNING: THIS IS NOT THE BEST OR FASTEST IMPLEMENTATION OF ANY OF THE FUNCTIONS, IT IS JUST FOR LEARNING PURPOSES.
