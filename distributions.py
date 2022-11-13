@@ -83,6 +83,8 @@ def binomial_range(n: int, k_lo: int, k_hi: int, p: float) -> (float, list):
     result = []
     accum = []
     
+    k_hi = min(k_hi, n)
+    
     for i in range(k_lo, k_hi + 1):
         temp = binomial(n, i, p)
         result.append(temp)
